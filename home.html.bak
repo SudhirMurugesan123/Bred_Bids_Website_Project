@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bredbids</title>
+    <link rel="stylesheet" href="bredbids.css">
+</head>
+<body>
+
+	
+	<a href="#home"><img src="images/bredbids.jpg" alt="Bred Bids" class="logo"></a>
+
+<!--DROPDOWN MENU-->
+<div class="navbar">
+	<a href="#home">Home </a>
+	<a href="#products">Products </a>
+	<a href="#about">About Us </a>
+	<a href="#manage">Manage Order </a>
+		<div class="dropdown">
+			<button class="dropbtn">Account 
+			<i class="fa fa-caret-down"></i>
+		</button>
+    <div class="dropdown-content">
+		<a href="#login">Log In</a>
+		<a href="#sign">Sign Up</a>
+		<a href="#account">Manage Account</a>
+		</div>
+	</div> 
+</div>
+
+<h1 style="font-size:2vw;">Bred Bids </h1>
+
+<img src="../HTML CSS Project/images/index4.jpg" alt="Shoe_Image">
+
+</body>
+</html>

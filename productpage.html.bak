@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product Page</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="bredbids.css">
+<style>
+
+.center {
+  margin: auto;
+  width: 60%;
+  border: 10px solid #c28be6;
+  padding: 10px;
+}
+
+h1{
+text-align:center;
+border-width:7px;
+ border-style:solid; 
+ border-color:#ffcc2b; 
+}
+
+img {
+  border: 5px solid #555;
+  max-width: 480px;
+	width: 100%;
+	height: auto;
+        display: block;
+        margin:20px auto;
+}
+
+#num{
+align-self: center;
+}
+
+</style>
+<script src=""></script>
+</head>
+<body>
+
+<a href="#home"><img src="images/bredbids.jpg" alt="Bred Bids" class="logo"></a>
+
+<!--DROPDOWN MENU-->
+<div class="navbar">
+	<a href="#home">Home </a>
+	<a href="#products">Products </a>
+	<a href="#about">About Us </a>
+	<a href="#manage">Manage Order </a>
+		<div class="dropdown">
+			<button class="dropbtn">Account 
+			<i class="fa fa-caret-down"></i>
+		</button>
+    <div class="dropdown-content">
+		<a href="#login">Log In</a>
+		<a href="#sign">Sign Up</a>
+		<a href="#account">Manage Account</a>
+		</div>
+	</div> 
+</div>
+
+<h1 style="font-size:2vw;">Bred Bids </h1>
+
+  <!--images for product page-->
+  
+  <div class="center">
+  <img src="images/purp_jord.png" alt="purple jordans" width="100" height="100">
+  <h1>Purple "Wock" Jordans</h1>
+  <img src="images/red_jord.png" alt="red jordans" width="100" height="100">
+  <h1>Red "Morroco" Jordans</h1>
+  <img src="images/black_jord.png" alt="black jordans" width="100" height="100">
+  <h1>jordans</h1>
+  <img src="images/white_jord.png" alt="white jordans" width="100" height="100">
+  <img src="images/black_foamrunners.png" alt="black foamrunners" width="100" height="100">
+  <img src="images/tan_yeezy.png" alt="tan yeezys" width="100" height="100">
+  <img src="images/tan_slides.png" alt="tan yeezy slides" width="100" height="100">
+  <img src="images/bone_slides.png" alt="tan yeezy slides" width="100" height="100">
+  <img src="images/sand_foamrunners.png" alt="tan yeezy slides" width="100" height="100">
+  <img src="images/blue_nb.png" alt="tan yeezy slides" width="100" height="100">
+  <img src="images/green_nb.png" alt="tan yeezy slides" width="100" height="100">
+</div>
+
+
+
+
+
+
+</body>
+</html>

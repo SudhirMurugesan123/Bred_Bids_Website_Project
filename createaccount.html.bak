@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Create Account</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="bredbids.css">
+</head>
+<body>
+
+<a href="#home"><img src="images/bredbids.jpg" alt="Bred Bids" class="logo"></a>
+
+<!--DROPDOWN MENU-->
+<div class="navbar">
+	<a href="home.html">Home </a>
+	<a href="productpage.html">Products </a>
+	<a href="about.html">About Us </a>
+	<a href="#manage">Manage Order </a>
+		<div class="dropdown">
+			<button class="dropbtn">Account 
+			<i class="fa fa-caret-down"></i>
+		</button>
+    <div class="dropdown-content">
+		<a href="login.html">Log In</a>
+		<a href="createaccount.html">Sign Up</a>
+		</div>
+	</div> 
+</div>
+
+<h1 style="font-size:2vw;">Bred Bids </h1>
+
+<!--BEGIN CODE HERE-->
+
+<div class="accountp"><div class="accountheading">
+	<h2>Create Account</h2>
+</div>
+
+<form action="bredbids.html" method="get">
+	<p class="hiddentext"><label>First Name </label></p>
+	<p><input type="text" placeholder="First Name" name="firstn" size="45" maxlength="20" required>
+	<p class="hiddentext"><label>Last Name </label></p>
+	<p><input type="text" placeholder="Last Name" name="lastn" size="45" maxlength="20" required>
+<pre>
+
+
+</pre>
+	<p class="hiddentext"><label>Email Address </label></p>
+	<p><input type="text" placeholder="Email Address" name="email" size="45" maxlength="30" required>
+	<p class="hiddentext"><label>Password </label></p>
+	<p><input type="password" placeholder="Password" name="pswd" size="45" minlength="8" required>
+	<p><small><label>At least 8 characters, 1 uppercase letter and 1 number</label></small></p>
+
+<p>
+	<label><input type="submit" value="Sign Up"></label><br>
+	<label><input type="reset" value="Cancel"></label>
+</p>
+
+</form>
+</div>
+
+
+</body>
+</html>

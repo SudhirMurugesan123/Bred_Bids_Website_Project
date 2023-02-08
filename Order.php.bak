@@ -1,0 +1,133 @@
+<?php 
+require_once 'Db_operations.php'; 
+
+$db = new DB_operations(); 
+
+if(isset($_GET['product_id'])){
+    $product_info=$db->get_product_info($_GET['product_id']);
+}else{
+    $product_info=[];
+}
+
+if(count($product_info)==0){
+    header("location: /groupproject/");
+}
+
+$error_msg='';
+// $error_msg="Order save successfully.";
+if (isset($_POST['submit'])) {
+    $arr=[
+        'first_name'=>$_POST['firstn'],
+        'last_name'=>$_POST['lastn'],
+        'mobile_no'=>$_POST['phonen'],
+        'street_address'=>$_POST['Saddress'],
+        'state'=>$_POST['STATE'],
+        'city'=>$_POST['city'],
+        'zip_code'=>$_POST['zipC'],
+        'card_number'=>$_POST['CardN'],
+        'expiry_date'=>$_POST['exp'],
+        'cvv'=>$_POST['CardCVC'],
+        'product_id'=>$_POST['product_id'],
+        'product_price'=>$_POST['immediate_sell_price'],
+    ];
+    // $bid_price=$_POST['bid_price'];
+    // $product_price=$_POST['product_price'];
+    // $product_price_plus_5=$product_price+5;
+    // if($bid_price < $product_price_plus_5){
+    //     $bid_price_error="Bid price should be greater than or equal to ".$product_price_plus_5;
+    // }else{
+    //     $res=$db->update_bid__price($bid_price,$_GET['id']);
+    //     if($res){
+    //         header('Refresh: 0');
+    //     }else{
+    //         $bid_price_error="Something went wrong please try again.";
+    //     }
+    //     exit();
+    // }
+    $res=$db->new_order($arr);
+    if($res){
+        // $error_msg="Order save successfully.";
+        header("location: /groupproject/");
+        // header('Refresh: 0');
+    }else{
+        $error_msg="Something went wrong please try again.";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Manage Order</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="bredbids.css">
+<style>
+    p.error {
+        color: red;
+        font-size: 30px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<a href="#home"><img src="images/bredbids.jpg" alt="Bred Bids" class="logo"></a>
+
+<!--DROPDOWN MENU-->
+<div class="navbar">
+	<a href="#home">Home </a>
+	<a href="#products">Products </a>
+	<a href="#about">About Us </a>
+	<a href="#manage">Manage Order </a>
+		<div class="dropdown">
+			<button class="dropbtn">Account 
+			<i class="fa fa-caret-down"></i>
+		</button>
+    <div class="dropdown-content">
+		<a href="#login">Log In</a>
+		<a href="#sign">Sign Up</a>
+		<a href="#account">Manage Account</a>
+		</div>
+	</div> 
+</div>
+
+<h1 style="font-size:2vw;">Bred Bids </h1>
+
+<!--BEGIN CODE HERE-->
+<h1 style="font-size:2vw;text-align:center;">Manage orders</h1>
+<?php if(!empty($error_msg)){ ?>
+    <p class="error"><?php echo $error_msg; ?></p>
+<?php } ?>
+
+<img src="images/shoe.png" alt="shoe" width="500" height="333" style="margin: 0 auto;display: block;">
+<div class="accountp"><div class="accountheading">
+	<h2>Order and buy now</h2>
+</div>
+
+    <form action="" method="post">
+        <p class="hiddentext"><label>First Name </label></p>
+        <p><input type="text" placeholder="First Name" name="firstn" size="45" maxlength="20" required>
+        <p class="hiddentext"><label>Last Name </label></p>
+        <p><input type="text" placeholder="Last Name" name="lastn" size="45" maxlength="20" required>
+        <p class="hiddentext"><label>phone number </label></p>
+        <p><input type="text" placeholder="Cell number" name="phonen" size="45" maxlength="20" required>
+        <pre></pre>
+        <p class="hiddentext"><label>Shipping address </label></p>
+        <p><input type="text" placeholder="Street Address" name="Saddress" size="45" maxlength="30" required>
+            <p><input type="text" placeholder=" State " name="STATE" size="8" maxlength="8" required>
+            <p><input type="text" placeholder=" City " name="CITY" size="8" maxlength="8" required>
+        <p><input type="text" placeholder="Zip code " name="zipC" size="8" maxlength="5" required>
+        <p class="hiddentext"><label> Billing Information </label></p>
+        <p><input type="text" placeholder="Card Number " name="CardN" size="45" maxlength="30" required>
+        <p><input type="text" placeholder="EXP date " name="exp" size="8" maxlength="8" required>
+        <p><input type="text" placeholder="CVC " name="CardCVC" size="4" maxlength="3" required>
+        <input type="hidden" name="product_id" value="<?php echo $product_info['id']; ?>" />
+        <input type="hidden" name="immediate_sell_price" value="<?php echo $product_info['immediate_sell_price']; ?>" />
+        <p><label><input type="submit" value="place order" name = "submit"></label><br></p><p>
+        <label><input type="reset" value="Cancel order"></label></p>
+
+    </form>
+
+</div>
+</body>
+</html>

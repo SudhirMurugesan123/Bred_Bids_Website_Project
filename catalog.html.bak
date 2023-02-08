@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Catalog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="bredbids.css">
+</head>
+<body>
+
+<!--DROPDOWN MENU-->
+<div class="navbar">
+  <img src="images/bredbids.jpg" alt="Bred Bids" class="logo">
+    <div class="dropdown">
+    <button class="dropbtn">Account 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#login">Login</a>
+      <a href="#create">Create Account</a>
+    </div>
+  </div> 
+  <a href="#manage">Manage Order &nbsp;</a>
+  <a href="#about">About Us &nbsp;</a>
+  <a href="#products">Products &nbsp;</a>
+  <a href="#home">Home &nbsp;</a>
+</div>
+
+<!--BEGIN CODE HERE-->
+
+
+
+
+
+</body>
+</html>

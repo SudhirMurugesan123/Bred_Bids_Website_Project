@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="bredbids.css">
+</head>
+<body>
+  <a href="#home"><img src="images/bredbids.jpg" alt="Bred Bids" class="logo"></a>
+
+<!--DROPDOWN MENU-->
+<div class="navbar">
+	<a href="#home">Home </a>
+	<a href="#products">Products </a>
+	<a href="#about">About Us </a>
+	<a href="#manage">Manage Order </a>
+		<div class="dropdown">
+			<button class="dropbtn">Account 
+			<i class="fa fa-caret-down"></i>
+		</button>
+    <div class="dropdown-content">
+		<a href="#login">Log In</a>
+		<a href="#sign">Sign Up</a>
+		<a href="#account">Manage Account</a>
+		</div>
+	</div> 
+</div>
+
+<h1 style="font-size:2vw;">Bred Bids </h1>
+
+
+    <div class="container">
+        <form action="#">
+      
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="country">Country</label>
+            <input type="text" placeholder="Your Country">
+          </select>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+      <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/stockxdotcom/" class="fa fa-facebook"></a>
+</body>
+</html>
